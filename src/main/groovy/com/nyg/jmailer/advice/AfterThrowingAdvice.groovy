@@ -12,7 +12,7 @@ import com.nyg.jmailer.exception.BusinessException
 @Component
 class AfterThrowingAdvice {
 
-  Logger logger = LoggerFactory.getLogger(this.class)
+  Logger log = LoggerFactory.getLogger(this.class)
 
   @AfterThrowing(pointcut = "execution(* com.nyg.jmailer.service..**.*(..))", throwing = "ex")
   void doRecoveryActions(RuntimeException ex) {

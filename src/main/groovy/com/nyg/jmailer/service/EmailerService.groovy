@@ -9,7 +9,7 @@ import com.nyg.jmailer.exception.EmailerException
 @Service
 class EmailerService {
 
-  Logger logger = LoggerFactory.getLogger(this.class)
+  Logger log = LoggerFactory.getLogger(this.class)
 
   def sendEmail(){
     log.info 'Throwing an exception'
