@@ -1,19 +1,9 @@
 package com.nyg.jmailer.service
 
-import org.springframework.stereotype.Service
-import org.slf4j.Logger
-import org.slf4j.LoggerFactory
+import com.nyg.jmailer.command.MessageCommand
 
-import com.nyg.jmailer.exception.EmailerException
+interface EmailerService {
 
-@Service
-class EmailerService {
-
-  Logger log = LoggerFactory.getLogger(this.class)
-
-  def sendEmail(){
-    log.info 'Throwing an exception'
-    throw new EmailerException()
-  }
+  def sendEmail(MessageCommand command)
 
 }
