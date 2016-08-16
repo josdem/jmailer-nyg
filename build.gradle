@@ -32,6 +32,7 @@ dependencies {
   compile 'org.springframework.boot:spring-boot-starter-mail'
   compile 'org.springframework:spring-jms'
   compile 'org.apache.activemq:activemq-broker'
+  compile 'org.freemarker:freemarker:2.3.23'
 	compile 'org.codehaus.groovy:groovy'
 	testCompile 'org.springframework.boot:spring-boot-starter-test'
 }

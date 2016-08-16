@@ -1,6 +1,6 @@
 package com.nyg.jmailer.command
 
-class MessageCommand {
+class MessageCommand implements Command {
 
   String email
   String message
