@@ -16,6 +16,8 @@ import com.nyg.jmailer.service.MailService
 class MailServiceImpl implements MailService {
 
   @Autowired
+  Configuration configuration
+  @Autowired
   JavaMailSenderImpl javaMailSender
 
   Boolean sendMailWithTemplate(final Map values, final Map model, final String template) {

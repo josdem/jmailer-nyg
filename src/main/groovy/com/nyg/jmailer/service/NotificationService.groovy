@@ -1,10 +1,10 @@
 package com.nyg.jmailer.service
 
-import com.nyg.jmailer.command.MessageCommand
+import com.nyg.jmailer.command.Command
 
 interface NotificationService {
 
-  Boolean sendNotification(MessageCommand command)
+  Boolean sendNotification(Command command)
 
 }
 

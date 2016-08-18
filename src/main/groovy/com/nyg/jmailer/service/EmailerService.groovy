@@ -1,9 +1,9 @@
 package com.nyg.jmailer.service
 
-import com.nyg.jmailer.command.MessageCommand
+import com.nyg.jmailer.command.Command
 
 interface EmailerService {
 
-  def sendEmail(MessageCommand command)
+  def sendEmail(Command command)
 
 }

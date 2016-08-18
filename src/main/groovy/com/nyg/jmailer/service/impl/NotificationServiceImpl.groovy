@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory
 
 import com.nyg.jmailer.service.NotificationService
 import com.nyg.jmailer.service.MailService
-import com.nyg.jmailer.command.MessageCommand
+import com.nyg.jmailer.command.Command
 
 @Service
 class NotificationServiceImpl implements NotificationService {
@@ -24,9 +24,9 @@ class NotificationServiceImpl implements NotificationService {
   Logger log = LoggerFactory.getLogger(this.class)
 
   @Override
-  Boolean sendNotification(MessageCommand messageCommand) {
-    def data = [email:messageCommand.email, subject:subject]
-    mailService.sendMailWithTemplate(data, messageCommand.properties, template)
+  Boolean sendNotification(Command command) {
+    def data = [email:command.email, subject:subject]
+    mailService.sendMailWithTemplate(data, command.properties, template)
   }
 
 }

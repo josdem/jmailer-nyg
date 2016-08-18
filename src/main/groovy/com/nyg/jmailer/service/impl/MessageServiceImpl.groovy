@@ -14,7 +14,7 @@ import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
 import com.nyg.jmailer.service.MessageService
-import com.nyg.jmailer.command.MessageCommand
+import com.nyg.jmailer.command.Command
 
 @Service
 @EnableJms
@@ -25,7 +25,7 @@ class MessageServiceImpl implements MessageService {
 
   Logger log = LoggerFactory.getLogger(this.class)
 
-  void message(final MessageCommand command) {
+  void message(final Command command) {
     MessageCreator messageCreator = new MessageCreator() {
 
       @Override
