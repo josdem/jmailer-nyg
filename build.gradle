@@ -34,9 +34,14 @@ dependencies {
   compile 'org.apache.activemq:activemq-broker'
   compile 'org.freemarker:freemarker:2.3.23'
 	compile 'org.codehaus.groovy:groovy'
+  testCompile 'org.spockframework:spock-spring:1.0-groovy-2.4'
 	testCompile 'org.springframework.boot:spring-boot-starter-test'
 }
 
 bootRun {
+  systemProperties = System.properties
+}
+
+test {
   systemProperties = System.properties
 }
